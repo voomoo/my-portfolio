@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { GiCowled } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { Tooltip } from "antd";
 
 const Navigation = () => {
   const [hidden, setHidden] = useState(false);
@@ -44,11 +43,9 @@ const Navigation = () => {
           textAlign: "center",
         }}
       >
-        <Tooltip title="Home">
-          <h3>
-            <GiCowled size={36} />
-          </h3>
-        </Tooltip>
+        <h3>
+          <GiCowled size={36} />
+        </h3>
       </Link>
       <Link
         to={{

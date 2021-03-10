@@ -396,7 +396,7 @@
   }
 
   .frontend {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .frontend .description {

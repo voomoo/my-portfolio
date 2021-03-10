@@ -87,6 +87,7 @@ const Error = () => {
           },
         }}
       />
+      <h2 style={{ color: "#c4c4c4", textAlign: "center" }}>Page Not Found</h2>
     </div>
   );
 };
