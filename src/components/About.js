@@ -35,10 +35,10 @@ const About = () => {
       <div className="about-intro">
         <div className="about-textual">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            possimus, dicta dolorem praesentium velit libero eveniet obcaecati
-            suscipit eaque nihil alias nemo ex. Deserunt, asperiores esse labore
-            nisi iste natus!
+            I am an enthusiastic and driven graduate with an Honors degree.
+            Passionate about implementing and launching new projects. Currently,
+            I am Looking to start my career as an entry-level software developer
+            with a reputed firm driven by technology.
           </p>
         </div>
         <div
