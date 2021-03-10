@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Particles from "react-particles-js";
 import me from "../assets/images/me_hi.svg";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import Aos from "aos";
 
 const HeroSection = () => {
   const history = useHistory();
-
+  const location = useLocation();
   const [particlNumber, setParticlNumber] = useState(0);
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -34,7 +34,9 @@ const HeroSection = () => {
           });
         }
       }}
-      data-aos="zoom-in"
+      data-aos={
+        typeof location.state === "undefined" ? "zoom-in" : location.state.anim
+      }
       data-aos-easing="ease-out-back"
     >
       <Particles

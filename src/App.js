@@ -4,6 +4,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Error from "./components/Error";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
+          <Error />
         </Switch>
       </div>
     </Router>

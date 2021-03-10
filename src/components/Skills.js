@@ -22,6 +22,7 @@ const Skills = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  console.log(typeof location.state === "undefined");
   return (
     <div
       className="skills"
@@ -38,7 +39,9 @@ const Skills = () => {
           });
         }
       }}
-      data-aos={location.state.anim}
+      data-aos={
+        typeof location.state === "undefined" ? "zoom-in" : location.state.anim
+      }
       data-aos-easing="ease-out-back"
     >
       <div className="frontend">

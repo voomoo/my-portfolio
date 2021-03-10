@@ -64,7 +64,9 @@ const Contact = () => {
           });
         }
       }}
-      data-aos={location.state.anim}
+      data-aos={
+        typeof location.state === "undefined" ? "zoom-in" : location.state.anim
+      }
       data-aos-easing="ease-out-back"
     >
       <Modal
