@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import Particles from "react-particles-js";
 import me from "../assets/images/me_hi.svg";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Aos from "aos";
 
 const HeroSection = () => {
-  const history = useHistory();
   const location = useLocation();
   const [particlNumber, setParticlNumber] = useState(0);
   useEffect(() => {
@@ -21,19 +20,6 @@ const HeroSection = () => {
 
   return (
     <div
-      onWheel={(e) => {
-        if (e.deltaY > 0) {
-          history.push({
-            pathname: "/about",
-            state: { anim: "slide-left", page: "about" },
-          });
-        } else {
-          history.push({
-            pathname: "/",
-            state: { anim: "slide-right", page: "hero" },
-          });
-        }
-      }}
       data-aos={
         typeof location.state === "undefined" ? "zoom-in" : location.state.anim
       }

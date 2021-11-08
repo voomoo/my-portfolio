@@ -251,7 +251,7 @@
 }
 
 .after:hover {
-  transform: translateY(0px);
+  transform: translateY(0px) !important;
 }
 
 .contact {

@@ -1,4 +1,4 @@
-import { useHistory, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import Aos from "aos";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
@@ -9,7 +9,6 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { Tooltip, Modal } from "antd";
 
 const Contact = () => {
-  const history = useHistory();
   const location = useLocation();
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -51,19 +50,6 @@ const Contact = () => {
   return (
     <div
       className="contact"
-      onWheel={(e) => {
-        if (e.deltaY > 0) {
-          history.push({
-            pathname: "/contact",
-            state: { anim: "slide-left", page: "contact" },
-          });
-        } else {
-          history.push({
-            pathname: "/projects",
-            state: { anim: "slide-right", page: "projects" },
-          });
-        }
-      }}
       data-aos={
         typeof location.state === "undefined" ? "zoom-in" : location.state.anim
       }

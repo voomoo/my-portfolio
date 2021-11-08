@@ -1,4 +1,4 @@
-import { useHistory, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import Aos from "aos";
 import { useEffect } from "react";
 import { Row, Col, Tooltip } from "antd";
@@ -12,7 +12,6 @@ import project5 from "../assets/images/project5.png";
 import project6 from "../assets/images/project6.png";
 
 const Projects = () => {
-  const history = useHistory();
   const location = useLocation();
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -20,19 +19,6 @@ const Projects = () => {
   return (
     <div
       className="projects"
-      onWheel={(e) => {
-        if (e.deltaY > 0) {
-          history.push({
-            pathname: "/contact",
-            state: { anim: "slide-left", page: "contact" },
-          });
-        } else {
-          history.push({
-            pathname: "/skills",
-            state: { anim: "slide-right", page: "skills" },
-          });
-        }
-      }}
       style={{ padding: "40px 60px" }}
       data-aos={
         typeof location.state === "undefined" ? "zoom-in" : location.state.anim

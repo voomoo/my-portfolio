@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Aos from "aos";
 import { FaReact, FaCss3Alt, FaBootstrap } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -17,7 +17,6 @@ import {
 } from "react-icons/si";
 
 const Skills = () => {
-  const history = useHistory();
   const location = useLocation();
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -26,19 +25,6 @@ const Skills = () => {
   return (
     <div
       className="skills"
-      onWheel={(e) => {
-        if (e.deltaY > 0) {
-          history.push({
-            pathname: "/projects",
-            state: { anim: "slide-left", page: "projects" },
-          });
-        } else {
-          history.push({
-            pathname: "/about",
-            state: { anim: "slide-right", page: "about" },
-          });
-        }
-      }}
       data-aos={
         typeof location.state === "undefined" ? "zoom-in" : location.state.anim
       }
@@ -48,9 +34,10 @@ const Skills = () => {
         <div className="description">
           <h3>Front-End Development</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-            hic voluptas repellendus cupiditate adipisci molestiae excepturi
-            voluptate sit recusandae provident. Illum perspiciatis distinctio
+            I love working as a frontend developer. Specially in React JS. I
+            have been learning and creating projects with React JS for more than
+            6 months. But not just React, I can also create web applications
+            with HTML, CSS and Javascript.
           </p>
         </div>
         <div className="techs">
@@ -71,9 +58,9 @@ const Skills = () => {
         <div className="description">
           <h3>Mobile App Development</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-            hic voluptas repellendus cupiditate adipisci molestiae excepturi
-            voluptate sit recusandae provident. Illum perspiciatis distinctio
+            Mobile app development is not my strong suite, but I did a few
+            projects with Flutter and Java native android app and I really
+            enjoyed it.
           </p>
         </div>
         <div className="techs">
@@ -92,9 +79,9 @@ const Skills = () => {
         <div className="description">
           <h3>UI Designing</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-            hic voluptas repellendus cupiditate adipisci molestiae excepturi
-            voluptate sit recusandae provident. Illum perspiciatis distinctio
+            I do UI designing just for fun. It is kind of my hobby. I enjoy it
+            very much. Although I may not be a great UI designer you can check
+            out my works at Dribbble, you can find the link in the contact page.
           </p>
         </div>
         <div className="techs">
